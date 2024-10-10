@@ -79,4 +79,9 @@ button:hover {
   margin-top: 10px; 
 }
 
+.signup-login-navigator{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 

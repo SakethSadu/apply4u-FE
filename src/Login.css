@@ -13,6 +13,7 @@
 h1.login-header {
     color: whitesmoke;
     margin-bottom: 10px; 
+    cursor: pointer;
 }
 
 h2.login-header-text {
@@ -47,7 +48,7 @@ h2.login-header-text {
 }
 
 a {
-    color: #007bff;
+    color: whitesmoke;
     text-align: center;
     margin-top: 10px;
     text-decoration: none;

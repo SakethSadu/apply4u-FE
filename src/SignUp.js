@@ -23,6 +23,10 @@ const SignUp = () => {
     return passwordRegex.test(password);
   };
 
+  const goToLogin = () => {
+    navigate('/login');
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage("");
@@ -101,6 +105,9 @@ const SignUp = () => {
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         <button type="submit">Register</button>
       </form>
+      <div class="signup-login-navigator">
+        <p onClick={goToLogin}>Already have an account?</p>
+      </div>
     </div>
   );
 };

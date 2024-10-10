@@ -39,9 +39,13 @@ const Login = () => {
     navigate('/register');
  }
 
+ const gotToHomePage = () => {
+  navigate('/');
+}
+
   return (
     <div className="login-container">
-      <h1 class= "login-header">Apply4U</h1>
+      <h1 class= "login-header" onClick={gotToHomePage}>Apply4U</h1>
       <h2 class= "login-header-text">We will take care of your Applications.</h2>
       <form class = "login-form" onSubmit={handleSubmit}>
         <input class = "login-input"
