@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import SignUp from './SignUp';
+import Login from './Login';
+import Home from './Home';
+import SuccessPage from "./SuccessPage";
 
 function App() {
+
+  {/*const [email,setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const getEmail = async (emailId) => {
+    try{
+      const response = await AudioParam.get("/api/apply4u/v1/email");
+
+    }
+  }
+    */}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/success" element={<SuccessPage />} />
+        
+      </Routes>
+    </Router>
   );
 }
 
